@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Violet Grace — Actor · Music · Film</title>
+<meta name="description" content="Violet Grace — Actor, musician, and film artist. Watch the reel, upcoming releases, and live performances.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+  /* Soft visible yellow for the Jade Music Festival 2026 link — matches the
+     site's warm palette, just a touch brighter so it stands out in the list. */
+  .jade-link-2026{
+    color: #E8C863;
+    transition: opacity .2s ease;
+  }
+  .jade-link-2026:hover,
+  .jade-link-2026:focus-visible{
+    opacity: .8;
+  }
+
+
+
+
+</style>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18082995472"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'AW-18082995472');
+</script>
+
+
+</head>
+<body>
+
+<!-- Grain overlay -->
+<div class="grain" aria-hidden="true"></div>
+
+<!-- ============ HEADER ============ -->
+<header class="site-header">
+  <a href="#top" class="logo">VG<span class="logo-dot">.</span></a>
+
+  <nav class="main-nav" aria-label="Primary">
+    <a href="#reel">Reel</a>
+    <a href="#performances">Performances</a>
+    <a href="#credits">Credits</a>
+    <a href="#connect">Stay in touch</a>
+  </nav>
+
+  <div class="header-socials">
+    <a href="https://open.spotify.com/artist/6fwGpGsmWu4kERmOrngO64" target="_blank" rel="noopener">Spotify</a>
+    <a href="https://www.youtube.com/@violetziyigrace" target="_blank" rel="noopener">YouTube</a>
+    <a href="https://www.instagram.com/violetziyigrace/" target="_blank" rel="noopener">Instagram</a>
+  </div>
+
+  <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+    <span></span><span></span>
+  </button>
+</header>
+
+<!-- Mobile menu -->
+<div class="mobile-menu" id="mobileMenu">
+  <button type="button" class="mobile-menu-close" id="mobileMenuClose" aria-label="Close menu">Close ✕</button>
+  <a href="#reel">Reel</a>
+  <a href="#performances">Performances</a>
+  <a href="#credits">Credits</a>
+  <a href="#connect">Stay in touch</a>
+</div>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="top">
+  <video class="hero-video" id="heroVideo" autoplay muted loop playsinline preload="auto">
+    <source src="https://violetziyi.com/media/OCT_SHORT.mp4" type="video/mp4">
+  </video>
+  <div class="hero-scrim"></div>
+
+  <div class="hero-content">
+    <p class="eyebrow reveal">Toronto · Vancouver</p>
+    <h1 class="hero-title">
+      <span class="reveal">Violet</span>
+      <span class="reveal" style="--d:0.08s">Grace</span>
+    </h1>
+    <p class="hero-sub reveal" style="--d:0.16s">Actor <span class="dot">·</span> Music <span class="dot">·</span> Film</p>
+  </div>
+
+  <button class="sound-toggle" id="soundToggle" aria-pressed="false">
+    <span class="sound-icon"></span>
+    <span class="sound-label">Sound off</span>
+  </button>
+
+  <a href="#reel" class="scroll-cue" aria-label="Scroll to reel">
+    <span>Scroll</span>
+    <i></i>
+  </a>
+</section>
+
+
+<!--
+============ MARQUEE (hidden for now) ============
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <span>Actor ✳ Musician ✳ Film ✳ Live Performance ✳ Screen ✳ Stage ✳ </span>
+    <span>Actor ✳ Musician ✳ Film ✳ Live Performance ✳ Screen ✳ Stage ✳ </span>
+  </div>
+</div>
+-->
+
+
+<!-- ============ SHOW BANNER ============ -->
+<!-- Thin highlighted strip. The whole bar is one link to the JMF schedule. -->
+<a class="show-banner" id="show" href="https://jmfa.ca/schedule/" target="_blank" rel="noopener noreferrer"
+   aria-label="Free live show at Jade Music Festival, Saturday November 7, 2026, 2:30pm, Showcase B, Vancouver. Opens the Jade Music Festival schedule in a new tab.">
+  <span class="show-badge">Upcoming Show</span>
+  <span class="show-text">
+    <strong class="show-name">Jade Music Festival</strong>
+    <span class="show-sep" aria-hidden="true">·</span> <span class="show-when">Sat, Nov 7 · 2:30pm, Showcase B</span> <br class="show-br">
+    <span class="show-where">Performance Works, Granville Island, Vancouver</span>
+  </span>
+  <span class="show-cta"><span class="show-cta-word">Details </span><span aria-hidden="true">↗</span></span>
+</a>
+
+
+<!-- ============ INTRO ============ -->
+<!--
+<section class="intro" id="about">
+  <p class="section-label reveal">Intro</p>
+  <p class="intro-text reveal">
+    I'm Violet — an actor and musician.
+    Recent work spans indie feature film, television, and original music.
+  </p>
+</section>
+-->
+
+<!-- ============ PERFORMANCES ============ -->
+<section class="performances" id="performances">
+  <p class="section-label reveal">Live</p>
+  <h2 class="reveal">Past Performances</h2>
+
+  <ul class="timeline">
+    
+
+<!--
+<li class="timeline-item reveal">
+      <span class="timeline-date">Nov 2026</span>
+      <span class="timeline-venue">Jade Music Festival - November 7th, 2026 - Showcase B, Live at 2:30pm!</span>
+      <span class="timeline-loc">Vancouver</span>
+    </li>
+-->
+    <li class="timeline-item reveal">
+      <span class="timeline-date">Jul 2026</span>
+      <span class="timeline-venue">Ensemble Theatre Company</span>
+      <span class="timeline-loc">Vancouver</span>
+    </li>
+    <li class="timeline-item reveal">
+      <span class="timeline-date">Apr 2026</span>
+      <span class="timeline-venue">Jade Music Festival</span>
+      <span class="timeline-loc">Taipei, Taiwan</span>
+    </li>
+    <li class="timeline-item reveal">
+      <span class="timeline-date">Nov 2025</span>
+      <span class="timeline-venue">Jade Music Festival</span>
+      <span class="timeline-loc">Vancouver</span>
+
+    </li>
+    <li class="timeline-item reveal">
+      <span class="timeline-date">Aug 2025</span>
+      <span class="timeline-venue">21st &amp; Main Plaza</span>
+      <span class="timeline-loc">Vancouver</span>
+    </li>
+    <li class="timeline-item reveal">
+      <span class="timeline-date">Jul 2025</span>
+      <span class="timeline-venue">Kensington Unplugged</span>
+      <span class="timeline-loc">Toronto</span>
+    </li>
+    <li class="timeline-item reveal">
+      <span class="timeline-date">May 2025</span>
+      <span class="timeline-venue">Cafe Unplugged</span>
+      <span class="timeline-loc">Seoul, South Korea</span>
+    </li>
+    <li class="timeline-item reveal">
+      <span class="timeline-date">Apr 2025</span>
+      <span class="timeline-venue">Live Set</span>
+      <span class="timeline-loc">Hong Kong</span>
+    </li>
+  </ul>
+</section>
+
+<!-- ============ REEL ============ -->
+<section class="reel" id="reel">
+  <div class="reel-heading">
+    <p class="section-label reveal">Watch</p>
+    <h2 class="reveal">The Reel</h2>
+    <p class="reel-hint reveal">Hover to preview · click to play</p>
+  </div>
+
+  <div class="filmstrip" id="filmstrip">
+
+    <article class="frame" tabindex="0" data-video="https://violetziyi.com/media/October_V2.mp4" data-title="October" data-meta="Single · 2026">
+      <video class="frame-video" muted loop playsinline preload="metadata">
+        <source src="https://violetziyi.com/media/October_V2.mp4#t=0.5" type="video/mp4">
+      </video>
+      <div class="frame-play" aria-hidden="true"></div>
+      <div class="frame-caption">
+        <span class="frame-title">October</span>
+        <span class="frame-meta">Single · 2026</span>
+      </div>
+    </article>
+
+    <article class="frame" tabindex="0" data-video="https://violetziyi.com/media/Korea_Promo1.mp4" data-title="Korea Interlude Promo" data-meta="Promo · 2026">
+      <video class="frame-video" muted loop playsinline preload="metadata">
+        <source src="https://violetziyi.com/media/Korea_Promo1.mp4#t=0.5" type="video/mp4">
+      </video>
+      <div class="frame-play" aria-hidden="true"></div>
+      <div class="frame-caption">
+        <span class="frame-title">Korea Promo</span>
+        <span class="frame-meta">Promo · 2026</span>
+      </div>
+    </article>
+
+    <article class="frame" tabindex="0" data-video="https://violetziyi.com/media/NastyBeast2.mp4" data-title="Nasty Beast" data-meta="Promo · 2026">
+      <video class="frame-video" muted loop playsinline preload="metadata">
+        <source src="https://violetziyi.com/media/NastyBeast2.mp4#t=0.5" type="video/mp4">
+      </video>
+      <div class="frame-play" aria-hidden="true"></div>
+      <div class="frame-caption">
+        <span class="frame-title">Nasty Beast</span>
+        <span class="frame-meta">Dance Premiere · 2026</span>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+
+<!-- ============ CREDITS ============ -->
+<section class="credits" id="credits">
+  <p class="section-label reveal">On Screen</p>
+  <h2 class="reveal">Acting Credits</h2>
+
+  <div class="credit-cards">
+    <a class="credit-card reveal" href="https://www.imdb.com/name/nm7448528/" target="_blank" rel="noopener">
+      <span class="credit-role">Cast</span>
+      <span class="credit-title">Overcompensating</span>
+      <span class="credit-net">A24 / Amazon Prime</span>
+    </a>
+    <a class="credit-card reveal" href="https://www.imdb.com/name/nm7448528/" target="_blank" rel="noopener">
+      <span class="credit-role">Cast</span>
+      <span class="credit-title">Left for Dead</span>
+      <span class="credit-net">Lifetime</span>
+    </a>
+  </div>
+</section>
+
+<!-- ============ CONNECT / MAILING LIST ============ -->
+<!-- Submits via script.js to a Google Apps Script web app that writes to your Google Sheet. -->
+<section class="connect" id="connect">
+  <p class="section-label reveal">Join the Mailing List</p>
+  <h2 class="connect-title reveal">Get your invite to my EP release party</h2>
+  <p class="mail-intro reveal">Updates on new releases and live shows.</p>
+
+  <form class="mail-form reveal" id="mailForm" action="#" method="post">
+    <div class="mail-field mail-field--full">
+      <label for="mlEmail">Email <span class="mail-req" aria-hidden="true">*</span><span class="visually-hidden">(required)</span></label>
+      <input type="email" id="mlEmail" name="email" required autocomplete="email" inputmode="email" maxlength="200" placeholder="you@example.com">
+    </div>
+
+    <div class="mail-field mail-field--full">
+      <label for="mlName">Name <span class="mail-opt">(optional)</span></label>
+      <input type="text" id="mlName" name="name" autocomplete="name" maxlength="120" placeholder="Your name">
+    </div>
+
+    <div class="mail-field">
+      <label for="mlZip">ZIP / Postal code <span class="mail-opt">(optional)</span></label>
+      <input type="text" id="mlZip" name="zip" autocomplete="postal-code" maxlength="20" placeholder="e.g. V6B 1A1">
+    </div>
+
+    <div class="mail-field">
+      <label for="mlCountry">Country <span class="mail-opt">(optional)</span></label>
+      <input type="text" id="mlCountry" name="country" autocomplete="country-name" maxlength="80" placeholder="e.g. Canada">
+    </div>
+
+    <!-- Spam trap: real visitors never see or fill this. Do not remove. -->
+    <div class="mail-hp" aria-hidden="true">
+      <input type="text" name="company" tabindex="-1" autocomplete="off" aria-label="Do not fill in">
+    </div>
+
+    <button type="submit" class="mail-submit" id="mailSubmit">Join the list</button>
+    <p class="mail-status" id="mailStatus" role="status" aria-live="polite"></p>
+    <p class="mail-note">By joining, you agree to receive occasional emails from Violet Grace. You can unsubscribe at any time.</p>
+  </form>
+
+  <div class="connect-grid reveal">
+    <a href="https://www.imdb.com/name/nm7448528/" target="_blank" rel="noopener">IMDb</a>
+    <a href="https://open.spotify.com/artist/6fwGpGsmWu4kERmOrngO64" target="_blank" rel="noopener">Spotify</a>
+    <a href="https://www.youtube.com/@violetziyigrace" target="_blank" rel="noopener">YouTube</a>
+    <a href="https://www.instagram.com/violetziyigrace/" target="_blank" rel="noopener">Instagram</a>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <span>© 2026 Violet Grace</span>
+  <a href="#top">Back to top ↑</a>
+</footer>
+
+<!-- ============ LIGHTBOX ============ -->
+<div class="lightbox" id="lightbox" aria-hidden="true">
+  <div class="lightbox-backdrop" id="lightboxBackdrop"></div>
+  <div class="lightbox-panel">
+    <button class="lightbox-close" id="lightboxClose" aria-label="Close video">Close ✕</button>
+    <video class="lightbox-video" id="lightboxVideo" controls playsinline></video>
+    <div class="lightbox-info">
+      <span id="lightboxTitle"></span>
+      <span id="lightboxMeta"></span>
+    </div>
+  </div>
+</div>
+
+<script src="script.js?v=2"></script>
+</body>
+</html>
