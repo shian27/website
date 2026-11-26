@@ -336,6 +336,10 @@ button{ font-family: inherit; }
   min-height: 220px;
   max-height: 78vh;
 }
+/* The author's display rules below would otherwise override the HTML `hidden`
+   attribute, leaving all three (video, YouTube, image) showing side by side. */
+.lightbox-media[hidden]{ display:none !important; }
+
 video.lightbox-media,
 img.lightbox-media{
   max-width: 100%;
