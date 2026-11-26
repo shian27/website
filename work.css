@@ -237,6 +237,19 @@ button{ font-family: inherit; }
   margin-top: 18px;
 }
 
+.carousel-wrap{ position:relative; }
+.carousel-arrow{ display:none; }
+
+/* Default view: a swipeable row. Phones show 1 card (with a peek of the next),
+   tablets 2, desktop 3. Swipe, scroll or use the arrows to see them all. */
+.carousel.is-carousel{
+  display:flex; gap:16px; overflow-x:auto; overflow-y:hidden;
+  scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch;
+  scrollbar-width: none; overscroll-behavior-x: contain;
+}
+.carousel.is-carousel::-webkit-scrollbar{ display:none; }
+.carousel.is-carousel .card{ flex: 0 0 82%; scroll-snap-align: start; }
+
 .card{
   background: var(--bg-alt); border: 1px solid var(--line); overflow:hidden;
   cursor: pointer; display:flex; flex-direction:column;
@@ -364,8 +377,9 @@ a:focus-visible, button:focus-visible, .card:focus-visible{ outline: 1px solid v
   .results-grid{ grid-template-columns: repeat(4, 1fr); }
 
   .storyboard{ grid-template-columns: repeat(2, 1fr); }
-  .carousel{ grid-template-columns: repeat(2, 1fr); }
   .case-cta .btn{ align-self: flex-start; }
+  .carousel:not(.is-carousel){ grid-template-columns: repeat(2, 1fr); }
+  .carousel.is-carousel .card{ flex: 0 0 calc((100% - 16px) / 2); }
 }
 
 @media (min-width: 900px){
@@ -375,8 +389,19 @@ a:focus-visible, button:focus-visible, .card:focus-visible{ outline: 1px solid v
   .header-socials a:hover{ opacity:1; }
   .nav-toggle{ display:none; }
 
+  .carousel:not(.is-carousel){ grid-template-columns: repeat(3, 1fr); }
+  .carousel.is-carousel .card{ flex: 0 0 calc((100% - 32px) / 3); }
+  .carousel-arrow{
+    display:flex; align-items:center; justify-content:center;
+    position:absolute; top:42%; z-index:5; width:44px; height:44px; border-radius:50%;
+    background: var(--bg); color: var(--ivory); border:1px solid var(--line);
+    font-size:1.1rem; cursor:pointer; transition: border-color .2s, background .2s;
+  }
+  .carousel-arrow:hover{ border-color: var(--gold); background: var(--bg-alt); }
+  .carousel-prev{ left:-22px; }
+  .carousel-next{ right:-22px; }
+  .carousel-wrap.no-carousel .carousel-arrow{ display:none; }
   .site-header{ position: fixed; background: transparent; border:0; padding: 14px 40px; }
-  .carousel{ grid-template-columns: repeat(3, 1fr); }
   body{ padding-top: 0; }
 
   .hero-simple{ max-width: 1240px; margin: 0 auto; padding-top: 150px; }
