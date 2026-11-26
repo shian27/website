@@ -63,18 +63,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     // PHOTOS
+    { title: 'Instagram Promo',      client: 'We Are Native Nature', type: 'design', subject: 'promotional',
+      media: 'image', thumb: 'https://d2xzwkti23clo4.cloudfront.net/videos/nn1.png', src: 'https://d2xzwkti23clo4.cloudfront.net/videos/nn1.png' },
     { title: 'Instagram Post — Coldplay', client: 'EcoSpark',     type: 'social', subject: 'educational',
       media: 'image', thumb: 'https://d2xzwkti23clo4.cloudfront.net/videos/es4.png', src: 'https://d2xzwkti23clo4.cloudfront.net/videos/es4.png' },
-    { title: 'Original Illustration, Large Format', client: 'True Dating Stories - TV Series', type: 'design', subject: 'film',
-      media: 'image', thumb: 'https://d2xzwkti23clo4.cloudfront.net/videos/tds1.png', src: 'https://d2xzwkti23clo4.cloudfront.net/videos/tds1.png' },
-    { title: 'Contest Annoucement',       client: 'EcoSpark',     type: 'social', subject: 'educational',
-      media: 'image', thumb: 'https://d2xzwkti23clo4.cloudfront.net/videos/es3.png', src: 'https://d2xzwkti23clo4.cloudfront.net/videos/es3.png' },
-    { title: 'EcoWisdom Photo & Video',   client: 'EcoWisdom',     type: 'social', subject: 'educational',
-      media: 'image', thumb: 'https://d2xzwkti23clo4.cloudfront.net/videos/ew1.png', src: 'https://d2xzwkti23clo4.cloudfront.net/videos/ew1.png' },
     { title: 'Original Logo Design',      client: 'Killer Coworker - TV Movie', type: 'design', subject: 'film',
       media: 'image', thumb: 'https://d2xzwkti23clo4.cloudfront.net/videos/kc1.png', src: 'https://d2xzwkti23clo4.cloudfront.net/videos/kc3.png' },
-    { title: 'Instagram Promo Reminder',      client: 'We Are Native Nature', type: 'design', subject: 'promotional',
-      media: 'image', thumb: 'https://d2xzwkti23clo4.cloudfront.net/videos/nn1.png', src: 'https://d2xzwkti23clo4.cloudfront.net/videos/nn1.png' },
+
+    
+    //{ title: 'Original Illustration, Large Format', client: 'True Dating Stories - TV Series', type: 'design', subject: 'film',
+    //  media: 'image', thumb: 'https://d2xzwkti23clo4.cloudfront.net/videos/tds1.png', src: 'https://d2xzwkti23clo4.cloudfront.net/videos/tds1.png' },
+    //{ title: 'Contest Annoucement',       client: 'EcoSpark',     type: 'social', subject: 'educational',
+    //  media: 'image', thumb: 'https://d2xzwkti23clo4.cloudfront.net/videos/es3.png', src: 'https://d2xzwkti23clo4.cloudfront.net/videos/es3.png' },
+    //{ title: 'EcoWisdom Photo & Video',   client: 'EcoWisdom',     type: 'social', subject: 'educational',
+    //  media: 'image', thumb: 'https://d2xzwkti23clo4.cloudfront.net/videos/ew1.png', src: 'https://d2xzwkti23clo4.cloudfront.net/videos/ew1.png' },
+    
   ];
 
 
