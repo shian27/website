@@ -2,9 +2,9 @@
 // VIOLET GRACE — Client Work interactions
 // Built mobile-first: nothing heavy loads until it's needed.
 // ==========================================================================
- 
+
 document.addEventListener('DOMContentLoaded', () => {
- 
+
   /* ---------- Scroll reveal ---------- */
   const io = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
   document.querySelectorAll('.reveal').forEach(el => io.observe(el));
- 
+
   /* ---------- Mobile menu ---------- */
   const navToggle = document.querySelector('.nav-toggle');
   const mobileMenu = document.getElementById('mobileMenu');
@@ -30,64 +30,58 @@ document.addEventListener('DOMContentLoaded', () => {
   mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setMenu(false)));
   document.addEventListener('keydown', (e) => { if (e.key === 'Escape') setMenu(false); });
   window.matchMedia('(min-width: 900px)').addEventListener('change', (e) => { if (e.matches) setMenu(false); });
- 
+
   /* =====================================================================
      CONTENT LIBRARY DATA
      type:    social | video | design
      subject: promotional | film | educational
      media:   'video' (local mp4, hover-preview) | 'youtube' (thumb + iframe) | 'image'
      ===================================================================== */
-  const BASE = '/media/';
- 
+  
+
   const items = [
- 
- 
- 
+
+
+
     // JAMES VIDEOS
-    { title: 'TYPS Campaign Reel',        client: 'Client Reel',  type: 'social', subject: 'promotional',     media: 'video', src: BASE + 'TYPS1.mp4' },
- 
- 
-// { title: 'Mello Product Video — v1',  client: 'Mello',        type: 'social', subject: 'promotional',     media: 'video', src: BASE + 'Mello_V1.mp4' },
- 
- 
-    { title: 'Native Nature Educational Post',       client: 'NN',           type: 'social', subject: 'educational', media: 'video', src: BASE + 'NN_Canada1.mp4' },
-    { title: 'October Release Promo Part I',  client: 'Independent Artists',        type: 'social', subject: 'promotional',     media: 'video', src: BASE + 'Mello_V2.mp4' },
-    { title: 'October Release Promo Part II',     client: 'Independent Artists', type: 'social', subject: 'film',       media: 'video', src: BASE + 'October_V2.mp4' },
-    { title: 'HAGO Educational Social',     client: 'Help A Girl Out', type: 'social', subject: 'educational',       media: 'video', src: BASE + 'October_V2.mp4' },
-    { title: 'Nasty Beast Dance Promo',     client: 'Independent Artists', type: 'social', subject: 'film',       media: 'video', src: BASE + 'October_V2.mp4' },
-    { title: 'Film demo reel',     client: 'Independent Film', type: 'social', subject: 'film',       media: 'video', src: BASE + 'October_V2.mp4' },
- 
- 
- 
- 
+    { title: 'TYPS Campaign Reel',        client: 'Client Reel',  type: 'social', subject: 'promotional',     media: 'video', src: 'https://d2xzwkti23clo4.cloudfront.net/videos/TYPS1.mp4' },
+    { title: 'Film demo reel',     client: 'Independent Film', type: 'social', subject: 'film',       media: 'video', src: 'https://d2xzwkti23clo4.cloudfront.net/videos/Director_Reel_2026.mp4' },
+    { title: 'October Release Promo',     client: 'Independent Artists', type: 'social', subject: 'promotional',       media: 'video', src: 'https://d2xzwkti23clo4.cloudfront.net/videos/October_V2.mp4' },
+    { title: 'Native Nature Educational Post',       client: 'NN',           type: 'social', subject: 'promotional', media: 'video', src: 'https://d2xzwkti23clo4.cloudfront.net/videos/NN_Canada1.mp4' },
+    { title: 'HAGO Educational Social',     client: 'Help A Girl Out', type: 'social', subject: 'educational',       media: 'video', src: 'https://d2xzwkti23clo4.cloudfront.net/videos/PAD_V.mp4' },
+    { title: 'Nasty Beast Dance Promo',     client: 'Independent Artists', type: 'social', subject: 'film',       media: 'video', src: 'https://d2xzwkti23clo4.cloudfront.net/videos/Nasty-Beast-Dance.mp4' },
+    
+
+
+
     // YouTube EMBEDS
     { title: 'TYPS Highlight Reel', client: 'Toronto Youth Poetry Slam', type: 'video', subject: 'promotional',       media: 'youtube', src: 'https://youtu.be/twhl9PNfvm0' },
     { title: 'Her Health Her Power',     client: 'Help A Girl Out', type: 'video', subject: 'educational',     media: 'youtube', src: 'https://youtu.be/3kimG4Iu_Jc' },
     { title: 'Ottawa Conference Video',  client: 'Right to Play x CanWaCH', type: 'video', subject: 'educational', media: 'youtube', src: 'https://youtu.be/hzuE_k_lenQ' },
     { title: 'Prince Rupert Story',        client: 'Violet Grace', type: 'video', subject: 'film',       media: 'youtube', src: 'https://youtu.be/OFFbDRUHy1k' },
- 
- 
- 
+
+
+
     // PHOTOS
     { title: 'Instagram Post — Coldplay', client: 'EcoSpark',     type: 'social', subject: 'educational',
-      media: 'image', thumb: BASE + 'es4.png', src: BASE + 'es4.png' },
+      media: 'image', thumb: 'https://d2xzwkti23clo4.cloudfront.net/videos/es4.png', src: 'https://d2xzwkti23clo4.cloudfront.net/videos/es4.png' },
     { title: 'Original Illustration, Large Format', client: 'True Dating Stories - TV Series', type: 'design', subject: 'film',
-      media: 'image', thumb: BASE + 'tds1.png', src: BASE + 'tds1.png' },
+      media: 'image', thumb: 'https://d2xzwkti23clo4.cloudfront.net/videos/tds1.png', src: 'https://d2xzwkti23clo4.cloudfront.net/videos/tds1.png' },
     { title: 'Contest Annoucement',       client: 'EcoSpark',     type: 'social', subject: 'educational',
-      media: 'image', thumb: BASE + 'es3.png', src: BASE + 'es3.png' },
+      media: 'image', thumb: 'https://d2xzwkti23clo4.cloudfront.net/videos/es3.png', src: 'https://d2xzwkti23clo4.cloudfront.net/videos/es3.png' },
     { title: 'EcoWisdom Photo & Video',   client: 'EcoWisdom',     type: 'social', subject: 'educational',
-      media: 'image', thumb: BASE + 'ew1.png', src: BASE + 'ew1.png' },
+      media: 'image', thumb: 'https://d2xzwkti23clo4.cloudfront.net/videos/ew1.png', src: 'https://d2xzwkti23clo4.cloudfront.net/videos/ew1.png' },
     { title: 'Original Logo Design',      client: 'Killer Coworker - TV Movie', type: 'design', subject: 'film',
-      media: 'image', thumb: BASE + 'kc1.png', src: BASE + 'kc3.png' },
+      media: 'image', thumb: 'https://d2xzwkti23clo4.cloudfront.net/videos/kc1.png', src: 'https://d2xzwkti23clo4.cloudfront.net/videos/kc3.png' },
     { title: 'Instagram Promo Reminder',      client: 'We Are Native Nature', type: 'design', subject: 'promotional',
-      media: 'image', thumb: BASE + 'kc1.png', src: BASE + 'nn1.png' },
+      media: 'image', thumb: 'https://d2xzwkti23clo4.cloudfront.net/videos/nn1.png', src: 'https://d2xzwkti23clo4.cloudfront.net/videos/nn1.png' },
   ];
- 
- 
- 
+
+
+
   const TYPE_LABEL = { social: 'Social Media Content', video: 'Videography / Editing', design: 'Graphic Design' };
   const SUBJECT_LABEL = { promotional: 'Promotional', film: 'Film', educational: 'Educational Videos' };
- 
+
   /* ---------- YouTube URL helpers ---------- */
   function getYouTubeId(url) {
     if (url.includes('youtu.be/')) return url.split('youtu.be/')[1].split(/[?&]/)[0];
@@ -99,11 +93,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const id = getYouTubeId(url);
     return id ? `https://www.youtube.com/embed/${id}?autoplay=1&rel=0` : url;
   }
- 
+
   /* ---------- Render cards (built once; filtered via CSS display) ---------- */
   const carousel = document.getElementById('carousel');
   const frag = document.createDocumentFragment();
- 
+
   items.forEach((item, i) => {
     const card = document.createElement('article');
     card.className = 'card';
@@ -112,7 +106,7 @@ document.addEventListener('DOMContentLoaded', () => {
     card.dataset.subject = item.subject;
     card.dataset.search = (item.title + ' ' + item.client).toLowerCase();
     card.dataset.index = i;
- 
+
     let mediaHTML = '';
     if (item.media === 'image') {
       mediaHTML = `<img src="${item.thumb}" alt="${item.title}" loading="lazy" decoding="async">`;
@@ -129,7 +123,7 @@ document.addEventListener('DOMContentLoaded', () => {
         </video>
         <div class="card-play" aria-hidden="true"></div>`;
     }
- 
+
     card.innerHTML = `
       <div class="card-media">${mediaHTML}</div>
       <div class="card-body">
@@ -140,7 +134,7 @@ document.addEventListener('DOMContentLoaded', () => {
           <span class="card-tag">${SUBJECT_LABEL[item.subject]}</span>
         </div>
       </div>`;
- 
+
     // Hover/focus preview playback for local video cards
     if (item.media === 'video') {
       const previewVideo = card.querySelector('.card-video-preview');
@@ -155,45 +149,48 @@ document.addEventListener('DOMContentLoaded', () => {
         console.warn(`[client-work] Local video failed to load: ${item.src} — check the filename and case on the server.`);
       });
     }
- 
+
     // Fall back to a lower-res YouTube thumbnail if sddefault doesn't exist for this video
     if (item.media === 'youtube') {
       const img = card.querySelector('.yt-thumb');
       const id = getYouTubeId(item.src);
       img.addEventListener('error', () => { img.src = `https://img.youtube.com/vi/${id}/hqdefault.jpg`; }, { once: true });
     }
- 
+
     frag.appendChild(card);
   });
   carousel.appendChild(frag);
- 
+
   /* ---------- Filters + search ---------- */
   let activeType = 'all';
   let activeSubject = 'all';
   let searchTerm = '';
-  const PREVIEW_COUNT = 3;   // how many cards show before a Type/Subject chip is clicked
-  let expanded = false;      // becomes true once a chip is clicked or a search is typed
- 
+
   const cards = Array.from(carousel.querySelectorAll('.card'));
   const countEl = document.getElementById('libraryCount');
   const emptyEl = document.getElementById('libraryEmpty');
- 
+
   function applyFilters() {
     let visible = 0;
-    const collapsed = !expanded && activeType === 'all' && activeSubject === 'all' && !searchTerm;
+    // Default view (both filters "All", no search) = swipeable carousel of every item.
+    // Any filter or search = a normal grid of the matches.
+    const carouselMode = activeType === 'all' && activeSubject === 'all' && !searchTerm;
+    const wasGrid = !carousel.classList.contains('is-carousel');
+    carousel.classList.toggle('is-carousel', carouselMode);
+    carousel.parentElement.classList.toggle('no-carousel', !carouselMode);
     cards.forEach(card => {
       const matchesType = activeType === 'all' || card.dataset.type === activeType;
       const matchesSubject = activeSubject === 'all' || card.dataset.subject === activeSubject;
       const matchesSearch = !searchTerm || card.dataset.search.includes(searchTerm);
-      let show = matchesType && matchesSubject && matchesSearch;
-      if (show && collapsed && visible >= PREVIEW_COUNT) show = false;
+      const show = matchesType && matchesSubject && matchesSearch;
       card.style.display = show ? '' : 'none';
       if (show) visible++;
     });
-    countEl.textContent = `Showing ${visible} of ${cards.length}`;
+    countEl.textContent = carouselMode ? `Swipe to browse all ${cards.length}` : `Showing ${visible} of ${cards.length}`;
     emptyEl.hidden = visible !== 0;
+    if (carouselMode && wasGrid) carousel.scrollLeft = 0;   // returning to the carousel starts at the first card
   }
- 
+
   function wireChips(containerId, setter) {
     const container = document.getElementById(containerId);
     container.addEventListener('click', (e) => {
@@ -201,20 +198,23 @@ document.addEventListener('DOMContentLoaded', () => {
       if (!btn) return;
       container.querySelectorAll('.chip').forEach(c => c.classList.remove('is-active'));
       btn.classList.add('is-active');
-      expanded = true;
       setter(btn.dataset.filterType || btn.dataset.filterSubject);
       applyFilters();
     });
   }
   wireChips('typeChips', (v) => activeType = v);
   wireChips('subjectChips', (v) => activeSubject = v);
- 
+
+  // Arrow buttons (desktop): scroll one "page" left or right
+  function slide(dir) { carousel.scrollBy({ left: dir * (carousel.clientWidth + 16), behavior: 'smooth' }); }
+  document.getElementById('carouselPrev').addEventListener('click', () => slide(-1));
+  document.getElementById('carouselNext').addEventListener('click', () => slide(1));
+
   document.getElementById('librarySearch').addEventListener('input', (e) => {
     searchTerm = e.target.value.trim().toLowerCase();
-    if (searchTerm) expanded = true;
     applyFilters();
   });
- 
+
   /* =====================================================================
      LIGHTBOX — media is only fetched when a card is opened
      ===================================================================== */
@@ -224,12 +224,12 @@ document.addEventListener('DOMContentLoaded', () => {
   const lightboxIframe = document.getElementById('lightboxIframe');
   const lightboxTitle = document.getElementById('lightboxTitle');
   const lightboxMeta = document.getElementById('lightboxMeta');
- 
+
   // Surface real load failures for the lightbox video too (same diagnostic as the card preview)
   lightboxVideo.addEventListener('error', () => {
     console.warn(`[client-work] Lightbox video failed to load: ${lightboxVideo.src} — check the filename and case on the server.`);
   });
- 
+
   function resetLightboxMedia() {
     lightboxVideo.hidden = true;
     lightboxVideo.pause();
@@ -239,13 +239,13 @@ document.addEventListener('DOMContentLoaded', () => {
     lightboxIframe.hidden = true;
     lightboxIframe.removeAttribute('src');
   }
- 
+
   function openItem(item) {
     lightboxTitle.textContent = item.title;
     lightboxMeta.textContent = `${item.client} · ${TYPE_LABEL[item.type] || item.type}`;
- 
+
     resetLightboxMedia();
- 
+
     if (item.media === 'youtube') {
       lightboxIframe.hidden = false;
       lightboxIframe.title = item.title;
@@ -259,12 +259,12 @@ document.addEventListener('DOMContentLoaded', () => {
       lightboxImage.hidden = false;
       lightboxImage.src = item.src;
     }
- 
+
     lightbox.classList.add('open');
     lightbox.setAttribute('aria-hidden', 'false');
     document.body.style.overflow = 'hidden';
   }
- 
+
   function closeLightbox() {
     lightbox.classList.remove('open');
     lightbox.setAttribute('aria-hidden', 'true');
@@ -272,7 +272,7 @@ document.addEventListener('DOMContentLoaded', () => {
     lightboxVideo.load();
     document.body.style.overflow = '';
   }
- 
+
   carousel.addEventListener('click', (e) => {
     const card = e.target.closest('.card');
     if (!card) return;
@@ -285,12 +285,12 @@ document.addEventListener('DOMContentLoaded', () => {
     e.preventDefault();
     openItem(items[Number(card.dataset.index)]);
   });
- 
+
   document.getElementById('lightboxClose').addEventListener('click', closeLightbox);
   document.getElementById('lightboxBackdrop').addEventListener('click', closeLightbox);
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && lightbox.classList.contains('open')) closeLightbox();
   });
- 
+
   applyFilters();
 });
