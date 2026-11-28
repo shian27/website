@@ -131,6 +131,39 @@ video{ display:block; }
   font-family: var(--font-body); font-size: .95rem; line-height:1.55;
   color: var(--ivory); opacity:.85; max-width: 46ch; margin-top: 16px;
 }
+
+.sound-toggle{
+  position:absolute; right: var(--edge); bottom: 40px; z-index:3;
+  display:flex; align-items:center; gap:10px;
+  background: rgba(18,14,12,.4); border: 1px solid var(--line);
+  color: var(--ivory); font-family: var(--font-mono); font-size:.72rem;
+  letter-spacing:.06em; text-transform:uppercase;
+  padding: 10px 16px; border-radius: 999px; cursor:pointer;
+  backdrop-filter: blur(6px);
+  transition: border-color .25s;
+}
+.sound-toggle:hover{ border-color: var(--gold); }
+.sound-icon{
+  width:8px; height:8px; border-radius:50%; background: var(--muted); display:inline-block;
+}
+.sound-toggle[aria-pressed="true"] .sound-icon{ background: var(--gold); box-shadow: 0 0 8px var(--gold); }
+
+.scroll-cue{
+  position:absolute; left: var(--edge); bottom: 40px; z-index:3;
+  display:flex; flex-direction:column; align-items:center; gap:10px;
+  font-family: var(--font-mono); font-size: .7rem; letter-spacing:.14em; text-transform:uppercase;
+  color: var(--ivory); opacity:.8;
+}
+.scroll-cue i{
+  width:1px; height: 38px; background: linear-gradient(var(--gold), transparent);
+  position:relative; overflow:hidden;
+}
+.scroll-cue i::after{
+  content:""; position:absolute; left:0; top:-100%; width:100%; height:100%;
+  background: var(--gold); animation: cue 1.8s ease-in-out infinite;
+}
+@keyframes cue{ to{ top: 100%; } }
+
 .role-chips{ display:flex; flex-wrap:wrap; gap: 8px; margin-top: 18px; }
 .role-chips span{
   font-family: var(--font-mono); font-size:.66rem; letter-spacing:.05em; text-transform:uppercase;
